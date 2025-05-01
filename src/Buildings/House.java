@@ -14,26 +14,19 @@ public class House extends Building{
     }
 
     //try to get it so that this method will be called every 3 days
-    public void prettinessComment(){
+    public int prettinessFactor(){
         if(gardens == 0){
-            prettinesFactor = 0;
             System.out.println("It's an alright house");
+            return 0;
         }else if(gardens > 0 && gardens < 2){
-            prettinesFactor = 1;
             System.out.println("Wow, nice place!");
+            return 1;
         }else{
-            prettinesFactor = 2;
             System.out.println("I-i can't believe my eyes! This is the most illustrious building I have ever layed my eyes upon. This this house... it's an absolute masterpiece!!!");
+            return 2;
         }
 
-        if(prettinesFactor == 1){
-            Player.money += 5;
-        }else if(prettinesFactor == 2){
-            Player.money += 10;
-        }else{
-            Player.money += 0;
-        }
+        
     }
-
     //make to string
 }
