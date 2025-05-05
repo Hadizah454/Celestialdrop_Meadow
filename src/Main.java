@@ -29,18 +29,25 @@ public class Main{
       if(job.equals("author")){
         System.out.println("How many rooms do you want?");
         int rNum = input.nextInt();
-        //find the thingy
+        input.nextLine();
         System.out.println("How many doors do you want?");
         int dNum = input.nextInt();
-        //find the thingy
+        input.nextLine();
         System.out.println("How many windows do you want?");
         int wNum = input.nextInt();
-        //find the thingy
+        input.nextLine();
         System.out.println("Do you want your house to have multiple floors? y or n?");
-        //if(input.nextLine().equals("y")){
-      //    boolean floors == true;
-        //}
-        House home = new House(col, wNum, dNum, bName, 1, rNum, true);
+        boolean floors;
+        if(input.nextLine().equals("y")){
+          floors = true;
+        }else{
+          floors = false;
+        }
+        System.out.println("How many gardens do you want?");
+        int gNum = input.nextInt();
+        input.nextLine();
+        House home = new House(col, wNum, dNum, bName, gNum, rNum, floors);
+        home.toString();
       }else if(job.equals("baker")){
         
       }else if(job.equals("farmer")){

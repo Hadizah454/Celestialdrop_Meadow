@@ -7,5 +7,4 @@ public class Farmer extends Occupation{
         this.crops = crops;
     }
 
-   
 }
