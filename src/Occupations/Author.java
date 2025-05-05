@@ -7,10 +7,6 @@ public class Author extends Occupation{
         this.books = books;
     }
 
-    @Override
-    public boolean canBuild(String building){
-        return building.equals("house");
-    }
 
-    //what else should the occupation classes have in them?
+    //start off with 10 books in inventory and finish writing a new book every 3 days?
 }

@@ -11,6 +11,7 @@ public class Bakery extends Building{
     }
 
     //make sure the player knows the max amount of ovens that can be added is 3
+    //can choose how much product they want to sell as long as it is under or equal to the threshold
     public void ovenBehavior(){
         if(ovens == 1){
             threshold = 5;

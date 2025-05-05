@@ -7,8 +7,5 @@ public class Farmer extends Occupation{
         this.crops = crops;
     }
 
-    @Override
-    public boolean canBuild(String building){
-        return building.equals("barn");
-    }
+   
 }

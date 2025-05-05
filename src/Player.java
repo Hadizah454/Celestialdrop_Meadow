@@ -9,7 +9,6 @@ public class Player{
 
     public Player(Occupation occupation){
         this.occupation = occupation;
-        this.building = building;
         this.inventory = new ArrayList<>();
     }
 
@@ -24,11 +23,11 @@ public class Player{
     //public static void incrementActions(){} <- put in main class(where the event loop is)
 
     //public void build(Building b){
-       // if(occupation.canBuild(b.getName()) == true){
-          //  this.building = b;
-        //    System.out.println("You have successfully built a very fine " + b.getName() + "!");
-      //  }
-   // }
+      //  if(occupation.canBuild(b.getName())){
+        //    this.building = b;
+          //  System.out.println("You have successfully built a very fine " + b.getName() + "!");
+        //}
+    //}
 
     public void sell(){}
 

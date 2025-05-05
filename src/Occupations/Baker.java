@@ -7,8 +7,5 @@ public class Baker extends Occupation{
         this.bakedGoods = bakedGoods;
     }
 
-    @Override
-    public boolean canBuild(String building){
-        return building.equals("bakery");
-    }
+
 }

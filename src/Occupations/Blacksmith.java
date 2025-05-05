@@ -7,8 +7,4 @@ public class Blacksmith extends Occupation{
         this.tools = tools;
     }
 
-    @Override
-    public boolean canBuild(String building){
-        return building.equals("workshop");
-    }
 }
