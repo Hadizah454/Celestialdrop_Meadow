@@ -20,6 +20,5 @@ public class Barn extends Building{
 
     //make a class that lets the player know how many horses they have and allows them to buy more if they would like
 
-   
     //make tostring
 }

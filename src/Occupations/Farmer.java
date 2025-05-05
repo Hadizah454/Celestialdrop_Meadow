@@ -1,0 +1,14 @@
+//able to sell crops and animal products
+public class Farmer extends Occupation{
+    int crops;
+
+    public Farmer(String job, int crops){
+        super("farmer");
+        this.crops = crops;
+    }
+
+    @Override
+    public boolean canBuild(String building){
+        return building.equals("barn");
+    }
+}
