@@ -28,7 +28,7 @@ public class House extends Building{
 
         
     }
-    //make to string
+    
     @Override
     public String toString(){
         if(singleFloor == true){

@@ -7,4 +7,7 @@ public class Farmer extends Occupation{
         this.crops = crops;
     }
 
+    public void farmCrop(){
+        crops += 1;
+    }
 }

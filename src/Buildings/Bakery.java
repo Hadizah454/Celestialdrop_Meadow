@@ -1,8 +1,8 @@
 public class Bakery extends Building{
-    int ovens;
-    int displayWindows;
-    static int totalBakes = 0; //total items made
-    int threshold = 0; //product threshold
+    public int ovens;
+    public int displayWindows;
+    public static int totalBakes = 0; //total items made
+    public int threshold = 0; //product threshold
 
     public Bakery(String color, int windows, int doors, String name, int ovens, int displayWindows){
         super(color, windows, doors, name);
@@ -10,8 +10,6 @@ public class Bakery extends Building{
         this.displayWindows = displayWindows;
     }
 
-    //make sure the player knows the max amount of ovens that can be added is 3
-    //can choose how much product they want to sell as long as it is under or equal to the threshold
     public void ovenBehavior(){
         if(ovens == 1){
             threshold = 5;

@@ -23,20 +23,27 @@ public class Player{
     public void addToInventory(Object o){
         inventory.add(o);
     }
+
+    public void addProductToInventory(Object o){
+        inventory.add(0, o);
+    }
     //public static void incrementActions(){} <- put in main class(where the event loop is)
 
-    //public void build(Building b){
-      //  if(occupation.canBuild(b.getName())){
-        //    this.building = b;
-          //  System.out.println("You have successfully built a very fine " + b.getName() + "!");
-        //}
-    //}
+    public void sell(Object ob){
+        money = money + ob.getCost();
+        inventory.remove(ob);
+    }
 
-    public void sell(){}
+    public void purchase(Object obj){
+        money = money - obj.getCost();
+        inventory.add(obj);
+    }
 
-    public void purchase(){}
+    public String stats(){
+        return "Starcoins: " + money + "n/" + "Days played: " + days + "n/" + "Job: " + occupation + "n/" + "Building: " + building + "n/" + "Items in inventory: " + inventory.size();
+    }
 
-    public static void stats(){}
-
-    //what else should this class have?
+    public String toString(){
+        return "Our wonderous player, is a " + occupation + " who resides within a " + building +" has " + inventory.size() + " items in their inventory and has " + money + " starcoins in the bank!";
+    }
 }

@@ -7,5 +7,8 @@ public class Baker extends Occupation{
         this.bakedGoods = bakedGoods;
     }
 
+    public void bakePastry(){
+        bakedGoods += 1;
+    }
 
 }

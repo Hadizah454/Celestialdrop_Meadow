@@ -1,4 +1,3 @@
-//super class
 public class Occupation{
     String job;
 
@@ -10,12 +9,5 @@ public class Occupation{
     public String getJob(){
         return job;
     }
-
-
-    //what else should this class have in it?
-
-   
-
-
 
 }
