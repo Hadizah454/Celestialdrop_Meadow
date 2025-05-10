@@ -32,9 +32,9 @@ public class House extends Building{
     @Override
     public String toString(){
         if(singleFloor == true){
-            return "Named " + name + " this handsome " + color + " single story house is truly a home, with " + windows + " windows, " + doors + "doors, " + rooms + " rooms and" + gardens + " gardens!";
+            return "Named " + name + " this handsome " + color + " single story house is truly a home, with " + windows + " windows, " + doors + " doors, " + rooms + " rooms and " + gardens + " gardens!";
         }else{
-            return "Named " + name + " this handsome " + color + " multi-story house is truly a home, with " + windows + " windows, " + doors + "doors, " + rooms + " rooms and" + gardens + " gardens!";
+            return "Named " + name + " this handsome " + color + " multi-story house is truly a home, with " + windows + " windows, " + doors + " doors, " + rooms + " rooms and " + gardens + " gardens!";
         }
     }
 }

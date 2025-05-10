@@ -21,12 +21,12 @@ public class Main{
       System.out.println("Welcome to Celestialdrop Meadow! Please choose your profession:");
       System.out.println("Do you want to be a baker, author, blacksmith, or a farmer?");
       String job = input.nextLine().toLowerCase();
-      System.out.println("What color do you want the building to be?");
-      String col = input.nextLine().toLowerCase();
-      System.out.println("What do you want the name of your building to be?");
-      String bName = input.nextLine().toLowerCase();
-      
       if(job.equals("author")){
+        System.out.println("What color do you want the building to be?");
+        String col = input.nextLine().toLowerCase();
+        System.out.println("What do you want the name of your building to be?");
+        String bName = input.nextLine();
+
         System.out.println("How many rooms do you want?");
         int rNum = input.nextInt();
         input.nextLine();
@@ -54,10 +54,15 @@ public class Main{
         for(int i = 0; i < 10; i++){
           you.addProductToInventory(book);
         }
-        home.toString();
-
+        System.out.println(home.toString());
+        
         // make a new book every 3 days
       }else if(job.equals("baker")){
+        System.out.println("What color do you want the building to be?");
+        String col = input.nextLine().toLowerCase();
+        System.out.println("What do you want the name of your building to be?");
+        String bName = input.nextLine();
+        
         System.out.println("How many doors do you want?");
         int bdNum = input.nextInt();
         input.nextLine();
@@ -77,8 +82,13 @@ public class Main{
           you.addProductToInventory(pastry);
         }
         
-        baking.toString();
+        System.out.println(baking.toString());
       }else if(job.equals("farmer")){
+        System.out.println("What color do you want the building to be?");
+        String col = input.nextLine().toLowerCase();
+        System.out.println("What do you want the name of your building to be?");
+        String bName = input.nextLine();
+        
         System.out.println("How many doors do you want?");
         int badNum = input.nextInt();
         input.nextLine();
@@ -104,10 +114,15 @@ public class Main{
           you.addProductToInventory(crop);
         }
         Barn barned = new Barn(col, bawNum, badNum, bName, sNum, stables);
-        barned.toString();
+        System.out.println(barned.toString());
 
 
       }else if(job.equals("blacksmith")){
+        System.out.println("What color do you want the building to be?");
+        String col = input.nextLine().toLowerCase();
+        System.out.println("What do you want the name of your building to be?");
+        String bName = input.nextLine();
+        
         System.out.println("How many doors do you want?");
         int wdNum = input.nextInt();
         input.nextLine();
@@ -127,7 +142,7 @@ public class Main{
           you.addProductToInventory(tool);
         }
         Player.money -= (workin.forgeSize * 30);
-        workin.toString();
+        System.out.println(workin.toString());
       }else{
         System.out.println("That ain't an option bud");
       }
