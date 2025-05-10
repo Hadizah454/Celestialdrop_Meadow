@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Player{
     public static int days = 0;
     public static int money = 2000;
-    private ArrayList<String> inventory;
+    private ArrayList<Object> inventory;
     private Occupation occupation;
     private Building building;
 
@@ -20,6 +20,9 @@ public class Player{
         return building;
     }
 
+    public void addToInventory(Object o){
+        inventory.add(o);
+    }
     //public static void incrementActions(){} <- put in main class(where the event loop is)
 
     //public void build(Building b){

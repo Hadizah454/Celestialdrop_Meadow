@@ -20,5 +20,12 @@ public class Barn extends Building{
 
     //make a class that lets the player know how many horses they have and allows them to buy more if they would like
 
-    //make tostring
+    public String toString(){
+        if(stables == true){
+            return "The beauteous barn " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, and " + sections + " sections complete with its very own stable";
+        }else{
+            return "The beauteous barn " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, and " + sections + " sections";
+        }
+        
+    }
 }

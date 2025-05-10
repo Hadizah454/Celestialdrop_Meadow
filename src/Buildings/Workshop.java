@@ -17,4 +17,8 @@ public class Workshop extends Building{
     //also please make sure that the range that the forge size can be chosen is between 1 and 3
 
     //make toString
+    @Override
+    public String toString(){
+        return "The wonderous workshop " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, " + anvil + " anvils, and a forge with a size " + forgeSize + " times the standard size!";
+    }
 }

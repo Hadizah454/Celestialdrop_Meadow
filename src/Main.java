@@ -46,24 +46,70 @@ public class Main{
         System.out.println("How many gardens do you want?");
         int gNum = input.nextInt();
         input.nextLine();
+        Author a = new Author("author", 10);
+        Player you = new Player(a);
         House home = new House(col, wNum, dNum, bName, gNum, rNum, floors);
         home.toString();
       }else if(job.equals("baker")){
-        
+        System.out.println("How many doors do you want?");
+        int bdNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many windows do you want?");
+        int bwNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many ovens do you want?");
+        int oNum = input.nextInt();
+        System.out.println("How many display windows do you want?");
+        int dWNum = input.nextInt();
+        input.nextLine();
+        Baker b = new Baker("baker", 10);
+        Player you = new Player(b);
+        Bakery baking = new Bakery(col, bwNum, bdNum, bName, oNum, dWNum);
+        baking.toString();
       }else if(job.equals("farmer")){
-        
+        System.out.println("How many doors do you want?");
+        int badNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many windows do you want?");
+        int bawNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many sections do you want?");
+        int sNum = input.nextInt();
+        input.nextLine();
+        System.out.println("Do you want stables? It'll cost extra tho...(y or n)?");
+        boolean stables;
+        if(input.nextLine().equals("y")){
+          stables = true;
+        }else{
+          stables = false;
+        }
+
+        Farmer f = new Farmer("farmer", 10);
+        Player you = new Player(f);
+        //Object crop = new Object("crop");
+       // f.addToInventory(crop);
+        Barn barned = new Barn(col, bawNum, badNum, bName, sNum, stables);
+        barned.toString();
+
       }else if(job.equals("blacksmith")){
-        
+        System.out.println("How many doors do you want?");
+        int wdNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many windows do you want?");
+        int wwNum = input.nextInt();
+        input.nextLine();
+        System.out.println("How many anvils do you want?");
+        int aNum = input.nextInt();
+        System.out.println("What size[whole number] do you want the forge to be?");
+        int fsize = input.nextInt();
+        input.nextLine();
+        Blacksmith bl = new Blacksmith("blacksmith", 10);
+        Player you = new Player(bl);
+        Workshop workin = new Workshop(col, wwNum, wdNum, bName, aNum, fsize);
       }else{
         System.out.println("That ain't an option bud");
       }
       
-      
-      //do you want to build your fine establishment(needed to make cash) y or n?
-
-      //yes
-
-      //no
 
       }
 }
