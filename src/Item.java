@@ -1,8 +1,8 @@
-public class Object {
+public class Item {
     private String name;
     private int cost;
 
-    public Object(String name, int cost){
+    public Item(String name, int cost){
         this.name = name;
         this.cost = cost;
     }

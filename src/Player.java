@@ -3,13 +3,12 @@ import java.util.ArrayList;
 public class Player{
     public static int days = 0;
     public static int money = 2000;
-    private ArrayList<Object> inventory;
+    public static ArrayList<Item> inventory = new ArrayList<>();
     private Occupation occupation;
     private Building building;
 
     public Player(Occupation occupation){
         this.occupation = occupation;
-        this.inventory = new ArrayList<>();
     }
 
     public Occupation getOccupation(){
@@ -20,30 +19,30 @@ public class Player{
         return building;
     }
 
-    public void addToInventory(Object o){
+    public void addToInventory(Item o){
         inventory.add(o);
     }
 
-    public void addProductToInventory(Object o){
+    public void addProductToInventory(Item o){
         inventory.add(0, o);
     }
     //public static void incrementActions(){} <- put in main class(where the event loop is)
 
-    public void sell(Object ob){
+    public void sell(Item ob){
         money = money + ob.getCost();
         inventory.remove(ob);
     }
 
-    public void purchase(Object obj){
+    public void purchase(Item obj){
         money = money - obj.getCost();
         inventory.add(obj);
     }
 
     public String stats(){
-        return "Starcoins: " + money + "n/" + "Days played: " + days + "n/" + "Job: " + occupation + "n/" + "Building: " + building + "n/" + "Items in inventory: " + inventory.size();
+        return "Starcoins: " + money + "\n" + "Days played: " + days + "\n" + "Job: " + occupation.getJob() + "\n" + "Building: " + building + "\n" + "Items in inventory: " + inventory.size();
     }
 
     public String toString(){
-        return "Our wonderous player, is a " + occupation + " who resides within a " + building +" has " + inventory.size() + " items in their inventory and has " + money + " starcoins in the bank!";
+        return "Our wonderous player, is a " + occupation.getJob() + " who resides within a " + building +" has " + inventory.size() + " items in their inventory and has " + money + " starcoins in the bank! They have played for a magnificent " + days + " days!";
     }
 }
