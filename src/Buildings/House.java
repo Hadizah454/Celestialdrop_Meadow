@@ -6,6 +6,16 @@ public class House extends Building{
     private boolean singleFloor;
     private int prettinesFactor = 0;
 
+    /**
+     * Creates a new House with the specified color, name; whether or not it is a single floor; and the specified number of rooms, gardens, windows, and doors
+     * @param color - color of the house
+     * @param windows - number of windows the house has
+     * @param doors - number of doors the house has
+     * @param name - name of the house
+     * @param gardens - number of gardens the house has
+     * @param rooms - number of rooms the house has
+     * @param singleFloor - whether or not the house has a single story
+     */
     public House(String color, int windows, int doors, String name, int gardens, int rooms, boolean singleFloor){
         super(color, windows, doors, name);
         this.gardens = gardens;
@@ -13,7 +23,11 @@ public class House extends Building{
         this.singleFloor = singleFloor;
     }
 
-    //try to get it so that this method will be called every 3 days
+    
+    /**
+     * returns the prettines rating of the house and gives the player a comment depending on how many gardens the house has
+     * @return
+     */
     public int prettinessFactor(){
         if(gardens == 0){
             System.out.println("It's an alright house");
@@ -29,22 +43,41 @@ public class House extends Building{
         
     }
 
+    /**
+     * returns the number of gardens the house has
+     * @return
+     */
     public int getGardens(){
         return gardens;
     }
 
+    /**
+     * returns the number of rooms the house has
+     * @return
+     */
     public int getRooms(){
         return rooms;
     }
 
+    /**
+     * returns the boolean that represents whether or not the house has a single story
+     * @return
+     */
     public boolean isSingleFloor(){
         return singleFloor;
     }
 
+    /**
+     * returns the prettiness factor of the house
+     * @return
+     */
     public int getPretty(){
         return prettinesFactor;
     }
     
+    /**
+     * returns a description of the house depending on whether or not it is a single story building
+     */
     @Override
     public String toString(){
         if(singleFloor == true){

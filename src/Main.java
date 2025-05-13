@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Entry point of the program. Initializes the game and handles user input.
+     * @param args - command line arguments[not used]
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int dailyActions = 0;
@@ -204,6 +208,11 @@ public class Main {
       
 
 
+      /**
+       * switch case to return the price of the item the player wants to buy
+       * @param item - the item the player wants to buy
+       * @return
+       */
       public static int getItemPrice(String item) {
         switch (item) {
             case "flour": return 10;
