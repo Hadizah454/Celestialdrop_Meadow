@@ -1,9 +1,9 @@
 
 
 public class House extends Building{
-    int gardens;
-    int rooms;
-    boolean singleFloor;
+    private int gardens;
+    private int rooms;
+    private boolean singleFloor;
     private int prettinesFactor = 0;
 
     public House(String color, int windows, int doors, String name, int gardens, int rooms, boolean singleFloor){
@@ -28,13 +28,29 @@ public class House extends Building{
 
         
     }
+
+    public int getGardens(){
+        return gardens;
+    }
+
+    public int getRooms(){
+        return rooms;
+    }
+
+    public boolean isSingleFloor(){
+        return singleFloor;
+    }
+
+    public int getPretty(){
+        return prettinesFactor;
+    }
     
     @Override
     public String toString(){
         if(singleFloor == true){
-            return "Named " + name + " this handsome " + color + " single story house is truly a home, with " + windows + " windows, " + doors + " doors, " + rooms + " rooms and " + gardens + " gardens!";
+            return "Named " + super.getName() + " this handsome " + super.getColor() + " single story house is truly a home, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, " + rooms + " rooms and " + gardens + " gardens!";
         }else{
-            return "Named " + name + " this handsome " + color + " multi-story house is truly a home, with " + windows + " windows, " + doors + " doors, " + rooms + " rooms and " + gardens + " gardens!";
+            return "Named " + super.getName() + " this handsome " + super.getColor() + " multi-story house is truly a home, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, " + rooms + " rooms and " + gardens + " gardens!";
         }
     }
 }

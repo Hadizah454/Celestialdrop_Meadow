@@ -1,7 +1,7 @@
 public class Workshop extends Building{
 
-    public int anvil;
-    public int forgeSize;
+    private int anvil;
+    private int forgeSize;
 
     public Workshop(String color, int windows, int doors, String name, int anvil, int forgeSize){
         super(color, windows, doors, name);
@@ -22,9 +22,17 @@ public class Workshop extends Building{
         return toolsPerDay;
     }
 
+    public int getAnvil(){
+        return anvil;
+    }
+
+    public int getForgeSize(){
+        return forgeSize;
+    }
+
     
     @Override
     public String toString(){
-        return "The wonderous workshop " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, " + anvil + " anvils, and a forge with a size " + forgeSize + " times the standard size!";
+        return "The wonderous workshop " + super.getName() + " is a wonderful " + super.getColor() + " establishment, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, " + anvil + " anvils, and a forge with a size " + forgeSize + " times the standard size!";
     }
 }

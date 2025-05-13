@@ -1,10 +1,14 @@
 
 public class Author extends Occupation{
-    int books;
+    private int books;
 
     public Author(String job, int books){
         super("author");
         this.books = books;
+    }
+
+    public int getBooks(){
+        return books;
     }
 
     public void writeBook(){

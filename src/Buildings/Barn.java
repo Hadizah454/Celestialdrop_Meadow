@@ -1,12 +1,12 @@
 public class Barn extends Building{
 
-    int sections;
-    boolean stables;
-    int chickens;
-    int cows;
-    int ducks;
-    int sheep;
-    int goats;
+    private int sections;
+    private boolean stables;
+    private int chickens;
+    private int cows;
+    private int ducks;
+    private int sheep;
+    private int goats;
 
     public Barn(String color, int windows, int doors, String name, int sections, boolean stables){
         super(color, windows, doors, name);
@@ -62,12 +62,40 @@ public class Barn extends Building{
         }
     }
 
+    public int getChickens(){
+        return chickens;
+    }
+
+    public int getCows(){
+        return cows;
+    }
+
+    public int getDucks(){
+        return ducks;
+    }
+
+    public int getSheep(){
+        return sheep;
+    }
+
+    public int getGoats(){
+        return goats;
+    }
+
+    public int getSections(){
+        return sections;
+    }
+
+    public boolean hasStables(){
+        return stables;
+    }
+
 
     public String toString(){
         if(stables == true){
-            return "The beauteous barn " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, and " + sections + " sections complete with its very own stable";
+            return "The beauteous barn " + super.getName() + " is a wonderful " + super.getColor() + " establishment, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, and " + sections + " sections complete with its very own stable";
         }else{
-            return "The beauteous barn " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, and " + sections + " sections";
+            return "The beauteous barn " + super.getName() + " is a wonderful " + super.getColor() + " establishment, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, and " + sections + " sections";
         }
         
     }

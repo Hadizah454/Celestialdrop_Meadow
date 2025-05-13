@@ -1,8 +1,8 @@
 public class Bakery extends Building{
-    public int ovens;
-    public int displayWindows;
+    private int ovens;
+    private int displayWindows;
     public static int totalBakes = 0; //total items made
-    public int threshold = 0; //product threshold
+    private int threshold = 0; //product threshold
 
     public Bakery(String color, int windows, int doors, String name, int ovens, int displayWindows){
         super(color, windows, doors, name);
@@ -22,7 +22,19 @@ public class Bakery extends Building{
         }
     }
 
+    public int getOvens(){
+        return ovens;
+    }
+
+    public int getThreshold(){
+        return threshold;
+    }
+
+    public int getDisplayWindows(){
+        return displayWindows;
+    }
+
     public String toString(){
-        return "The beautiful bakery " + name + " is a wonderful " + color + " establishment, with " + windows + " windows, " + doors + " doors, " + ovens + " ovens, and " + displayWindows + " magnificent display windows!";
+        return "The beautiful bakery " + super.getName() + " is a wonderful " + super.getColor() + " establishment, with " + super.getWindows() + " windows, " + super.getDoors() + " doors, " + ovens + " ovens, and " + displayWindows + " magnificent display windows!";
     }
 }

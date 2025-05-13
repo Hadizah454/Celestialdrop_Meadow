@@ -1,8 +1,8 @@
 public class Building{
-    String color;
-    int windows;
-    int doors;
-    String name;
+    private String color;
+    private int windows;
+    private int doors;
+    private String name;
 
     public Building(String color, int windows, int doors, String name){
         this.color = color;
@@ -13,6 +13,18 @@ public class Building{
 
     public String getName(){
         return name;
+    }
+
+    public int getWindows(){
+        return windows;
+    }
+
+    public int getDoors(){
+        return doors;
+    }
+
+    public String getColor(){
+        return color;
     }
 
     public String toString(){

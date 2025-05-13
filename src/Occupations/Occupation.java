@@ -1,5 +1,5 @@
 public class Occupation{
-    String job;
+    private String job;
 
     public Occupation(String job){
         this.job = job;

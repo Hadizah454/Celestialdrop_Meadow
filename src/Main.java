@@ -32,7 +32,7 @@ public class Main {
             Author a = new Author("author", 10);
             you = new Player(a);
             House home = new House(col, wNum, dNum, bName, gNum, rNum, floors);
-            Player.money -= (home.gardens * 10);
+            Player.money -= (home.getGardens() * 10);
             Item book = new Item("book", 10);
             for (int i = 0; i < 10; i++) {
                 Player.inventory.add(book);
@@ -101,7 +101,7 @@ public class Main {
             Workshop shop = new Workshop(col, wwNum, wdNum, bName, aNum, fsize);
             Item tool = new Item("tool", 15);
             for (int i = 0; i < 10; i++) Player.inventory.add(tool);
-            Player.money -= (shop.forgeSize * 30);
+            Player.money -= (shop.getForgeSize() * 30);
             System.out.println(shop);
         } else {
             System.out.println("That ain't an option bud");
