@@ -17,7 +17,7 @@ There are plenty of jobs you can choose from! The professions available in this 
 
 ## 🎆Events
 
-You get the option to host an event once a week, hosting celebrations makes you more popular! Every 4 weeks there is mandatory celebration that you must attend called the Celestialdrop Meadow Gala!
+Comming in the next update: You get the option to host an event once a week, hosting celebrations makes you more popular! Every 4 weeks there is mandatory celebration that you must attend called the Celestialdrop Meadow Gala!
 
 There are plenty of events you can choose to host! The events available in this version are:
 - Birthday Party
@@ -40,3 +40,5 @@ You can also make friends and get to know your neighbors! Don't like people(Don'
 - Owl
 - Horse
 - Bird
+
+To play just run the program and follow the instructions to build the life of your dreams!
