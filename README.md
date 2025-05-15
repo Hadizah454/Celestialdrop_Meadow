@@ -13,6 +13,7 @@ There are plenty of jobs you can choose from! The professions available in this 
 - Farmer
 - Author
 - Blacksmith
+-Unemployed
 
 
 ## 🎆Events
